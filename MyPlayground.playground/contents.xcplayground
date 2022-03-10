@@ -9,5 +9,6 @@
         <page name='Funcoes IMC'/>
         <page name='Optionals'/>
         <page name='Conditionals'/>
+        <page name='Tableview'/>
     </pages>
 </playground>
