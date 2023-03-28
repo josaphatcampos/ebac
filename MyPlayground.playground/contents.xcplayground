@@ -10,5 +10,9 @@
         <page name='Optionals'/>
         <page name='Conditionals'/>
         <page name='Tableview'/>
+        <page name='Networking'/>
+        <page name='Static e Singleton'/>
+        <page name='Closure scaping'/>
+        <page name='Generic'/>
     </pages>
 </playground>
