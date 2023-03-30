@@ -8,7 +8,7 @@ let imageData = image!.jpegData(compressionQuality:1.0)
 
 let upload = URL(string: "")
 
-var request = URLRequest(url: upload)
+var request = URLRequest(url: upload!)
 request.httpMethod = "Post"
 
 let boundary = UUID().uuidString
@@ -16,12 +16,12 @@ request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField
 
 var data = Data()
 
-data.append("\r\n--\(boundary)\r\n".data(using: .utf8))
-data.append("Content-Disposition: form-data; name\"photo\"; filename=\"image.jpeg\"\r\n".data(using: .utf8))
-data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8))
-data.append(imageData)
+data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+data.append("Content-Disposition: form-data; name\"photo\"; filename=\"image.jpeg\"\r\n".data(using: .utf8)!)
+data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+data.append(imageData!)
 
-data.append("\r\n")
+//data.append("\r\n")
 // daqui pra baixo ver aula de UPLOADING part2 modulo 19
 
 let task = URLSession.shared.uploadTask(with: request, from: data){
